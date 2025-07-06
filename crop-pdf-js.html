@@ -4,18 +4,24 @@
   <meta charset="UTF-8" />
   <title>Crop Match Slip PDF</title>
   <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h2>Crop Match Slip PDF</h2>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-  <input type="file" id="inputPdf" accept="application/pdf"><br><br>
+  <div class="bg-white rounded-lg shadow-md p-8 w-full max-w-md text-center">
+    <h2 class="text-2xl font-semibold mb-6">Crop Match Slip PDF</h2>
 
-  <label>
-    <input type="checkbox" id="printStyle">
-    Microsoft print to PDF style page
-  </label><br><br>
+    <input type="file" id="inputPdf" accept="application/pdf" class="mb-4 block w-full text-gray-700" />
 
-  <button id="cropButton">Crop PDF</button>
+    <div class="flex items-center justify-center mb-6">
+      <input type="checkbox" id="printStyle" class="mr-2">
+      <label for="printStyle" class="text-gray-700">"Microsoft print to PDF" style page</label>
+    </div>
+
+    <button id="cropButton" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+      Crop PDF
+    </button>
+  </div>
 
   <script>
     document.getElementById('cropButton').addEventListener('click', async () => {
@@ -64,15 +70,11 @@
             x: -x1,
             y: - (height - y2),
           });
-
-          // Rotate page if needed (uncomment if you want to rotate)
-          // newPage.setRotation(PDFLib.degrees(90));
         }
       }
 
       const pdfBytes = await newPdf.save();
 
-      // Trigger download
       const blob = new Blob([pdfBytes], { type: "application/pdf" });
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
