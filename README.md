@@ -1,7 +1,7 @@
 # crop_match_slip_js
 Crop the match slip printed in PDF. The output .pdf file can be printed on any 58 mm thermal printer, for example, the POS-58 printer (model JLY-58).
 
-- [Download](https://docs.google.com/document/d/192dWLBdTF0V07t8vZuskYtMIyf7CMhtxE0CMEKWlkR4/edit)
+- [Download JS version (.zip)](https://drive.google.com/file/d/1B7SH2Mp0-0jZ24R7Vk865d21AvRdgEuT/view)
 
 ### Printer (model JLY-58)
 
@@ -9,9 +9,9 @@ Crop the match slip printed in PDF. The output .pdf file can be printed on any 5
 
 ## Tutorial
 
-- [Tutorial with pictures (English)](https://docs.google.com/document/d/192dWLBdTF0V07t8vZuskYtMIyf7CMhtxE0CMEKWlkR4/edit)
+- [Tutorial with pictures (English)](https://docs.google.com/document/d/1GveYO_EQheQD01Xlu0S6Y58ytdERfVPQhXMDzDYYRK8/edit)
 
-- [Tutorial com imagens (Português)](https://docs.google.com/document/d/185Rt67DwFnCKbkHu1ryvwpoR8krThXAZLQOQ7VEB8BI/edit)
+- [Tutorial com imagens (Português)](https://docs.google.com/document/d/1H1q5CSck1XUUyiShbmBOTq8wgkNCsidUXg9P97IBnAI/edit)
 
 ### Tutorial Crop Match Slip TOM
 
@@ -22,34 +22,36 @@ Crop the match slip printed in PDF. The output .pdf file can be printed on any 5
    ```
 ![match-slip-tutorial-image-10](images/picture-10.png)
 
-2. Open the ``crop-pdf-js.html` file.
-3. 
+2. Unzip the `.zip` file and open the ``crop-pdf-js.html` file.
+   
 ![match-slip-tutorial-image-12](images/picture-12.png)
 
-1. Choose the browser of your choice.
+3. Choose the browser of your choice.
    Note: in this tutorial will use the Google Chrome browser.
 
-2. Click "Select Input PDF" and select the Match Slip PDF file.
+4. Click "Select Input PDF" and select the Match Slip PDF file.
 
 ![match-slip-tutorial-image-11](images/picture-11.png)
 
-3. [Optional] Tick the box “Microsoft print to PDF style page” if the selected page was printed using it.
+5. [Optional] Tick the box “Microsoft print to PDF style page” if the selected page was printed using it.
 
 ![match-slip-tutorial-image-15](images/picture-15.png)
 
-4. Click “Crop PDF”.
+6. Click “Crop PDF”.
    
 ![match-slip-tutorial-image-16](images/picture-16.png)
 
-5. A success message will appear and a download will start with cropped PDF file.
+7. A success message will appear and a download will start with cropped PDF file.
 
 ![match-slip-tutorial-image-13](images/picture-13.png)
+
+8. Check your download directory.
 
 ![match-slip-tutorial-image-14](images/picture-14.png)
 
 ### Printing tutorial
 
-1. Connect via USB and turn on the printer.
+1. Connect the printer via USB and turn it on.
 
 2. Open the PDF file with your PDF reader.
    Note: In this tutorial, we will use Adobe PDF Reader.
