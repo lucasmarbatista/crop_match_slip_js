@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crop Match Slip PDF</title>
+  <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+<body>
+  <h2>Crop Match Slip PDF</h2>
+
+  <input type="file" id="inputPdf" accept="application/pdf"><br><br>
+
+  <label>
+    <input type="checkbox" id="printStyle">
+    Microsoft print to PDF style page
+  </label><br><br>
+
+  <button id="cropButton">Crop PDF</button>
+
+  <script>
+    document.getElementById('cropButton').addEventListener('click', async () => {
+      const inputPdf = document.getElementById('inputPdf').files[0];
+      const printStyle = document.getElementById('printStyle').checked;
+
+      if (!inputPdf) {
+        alert("Please select an input PDF.");
+        return;
+      }
+
+      const arrayBuffer = await inputPdf.arrayBuffer();
+      const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+      const newPdf = await PDFLib.PDFDocument.create();
+
+      let crops;
+      if (printStyle) {
+        crops = [
+          [1, 40, 590, 225],
+          [1, 230, 590, 415],
+          [1, 420, 590, 605],
+          [1, 615, 590, 800]
+        ];
+      } else {
+        crops = [
+          [1, 1, 590, 195],
+          [1, 198, 590, 393],
+          [1, 396, 590, 591],
+          [1, 594, 590, 789]
+        ];
+      }
+
+      const pages = pdfDoc.getPages();
+
+      for (const [x1, y1, x2, y2] of crops) {
+        for (const page of pages) {
+          const { width, height } = page.getSize();
+          const cropWidth = x2 - x1;
+          const cropHeight = y2 - y1;
+
+          const embeddedPage = await newPdf.embedPage(page);
+
+          const newPage = newPdf.addPage([cropWidth, cropHeight]);
+
+          newPage.drawPage(embeddedPage, {
+            x: -x1,
+            y: - (height - y2),
+          });
+
+          // Rotate page if needed (uncomment if you want to rotate)
+          // newPage.setRotation(PDFLib.degrees(90));
+        }
+      }
+
+      const pdfBytes = await newPdf.save();
+
+      // Trigger download
+      const blob = new Blob([pdfBytes], { type: "application/pdf" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = inputPdf.name.replace(".pdf", "_output.pdf");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      alert("The PDF was adjusted and downloaded successfully.");
+    });
+  </script>
+</body>
+</html>
