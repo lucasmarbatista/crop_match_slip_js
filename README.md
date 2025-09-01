@@ -26,9 +26,9 @@ Crop the match slip printed in PDF. The output .pdf file can be printed on any 5
    
 ![match-slip-tutorial-image-12](images/picture-12.png)
 
-3. Choose the browser of your choice.
+3. Choose your browser of choice.
    ```
-   Note: in this tutorial will use the Google Chrome browser.
+   Note: This tutorial uses the Google Chrome browser
    ```
 
 4. Click "Select Input PDF" and select the Match Slip PDF file.
