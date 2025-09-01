@@ -1,7 +1,7 @@
 # crop_match_slip_js
 Crop the match slip printed in PDF. The output .pdf file can be printed on any 58 mm thermal printer, for example, the POS-58 printer (model JLY-58).
 
-- [Download JS version (.zip)](https://drive.google.com/file/d/1B7SH2Mp0-0jZ24R7Vk865d21AvRdgEuT/view)
+- [Download JS version (.zip)](https://drive.google.com/file/d/1u06k8EolS4jWKl-Vw-XzI-gHlV33Q4Pe/view)
 
 ### Printer (model JLY-58)
 
@@ -39,7 +39,7 @@ Crop the match slip printed in PDF. The output .pdf file can be printed on any 5
    
 ![match-slip-tutorial-image-16](images/picture-16.png)
 
-6. A success message will appear and a download will start with cropped PDF file.
+6. A success message will appear and a download will start with a cropped PDF file.
 
 ![match-slip-tutorial-image-13](images/picture-13.png)
 
