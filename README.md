@@ -17,8 +17,8 @@ Crop the match slip printed in PDF. The output .pdf file can be printed on any 5
 
 1. Press CTRL + P in your browser and print as PDF. Choose the “Microsoft Print to PDF” or “Save as PDF”.
    ```
-   Note: These are the 2 methods to print as PDF.
-   Follow the instructions that match the way you printed or try both ways.
+   Note: These are the 2 methods to print as PDF .
+   You can print using both methods.
    ```
 ![match-slip-tutorial-image-10](images/picture-10.png)
 
@@ -27,25 +27,23 @@ Crop the match slip printed in PDF. The output .pdf file can be printed on any 5
 ![match-slip-tutorial-image-12](images/picture-12.png)
 
 3. Choose the browser of your choice.
-   Note: In this tutorial, we will use the Google Chrome browser.
+   ```
+   Note: in this tutorial will use the Google Chrome browser.
+   ```
 
 4. Click "Select Input PDF" and select the Match Slip PDF file.
 
 ![match-slip-tutorial-image-11](images/picture-11.png)
 
-5. [Optional] Tick the box “Microsoft print to PDF style page” if the selected page was printed using it.
-
-![match-slip-tutorial-image-15](images/picture-15.png)
-
-6. Click “Crop PDF”.
+5. Click “Crop PDF”.
    
 ![match-slip-tutorial-image-16](images/picture-16.png)
 
-7. A success message will appear and a download will start with a cropped PDF file.
+6. A success message will appear and a download will start with cropped PDF file.
 
 ![match-slip-tutorial-image-13](images/picture-13.png)
 
-8. Check your download directory.
+7. Check your download directory.
 
 ![match-slip-tutorial-image-14](images/picture-14.png)
 
@@ -53,10 +51,8 @@ Crop the match slip printed in PDF. The output .pdf file can be printed on any 5
 
 1. Connect the printer via USB and turn it on.
 
-2. Open the PDF file with the **Adobe PDF Reader**.
-   ```
-   Note: The POS58 printer may not work properly when using the browser’s PDF viewer (such as Google Chrome or Edge).
-   ```
+2. Open the PDF file with your PDF reader.
+   Note: In this tutorial, we will use Adobe PDF Reader.
 
 3. Click “Print” or press Ctrl + P.
 

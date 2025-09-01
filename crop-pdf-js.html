@@ -13,11 +13,6 @@
 
     <input type="file" id="inputPdf" accept="application/pdf" class="mb-4 block w-full text-gray-700" />
 
-    <div class="flex items-center justify-center mb-6">
-      <input type="checkbox" id="printStyle" class="mr-2">
-      <label for="printStyle" class="text-gray-700">"Microsoft print to PDF" style page</label>
-    </div>
-
     <button id="cropButton" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
       Crop PDF
     </button>
@@ -26,7 +21,6 @@
   <script>
     document.getElementById('cropButton').addEventListener('click', async () => {
       const inputPdf = document.getElementById('inputPdf').files[0];
-      const printStyle = document.getElementById('printStyle').checked;
 
       if (!inputPdf) {
         alert("Please select an input PDF.");
@@ -37,22 +31,12 @@
       const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
       const newPdf = await PDFLib.PDFDocument.create();
 
-      let crops;
-      if (printStyle) {
-        crops = [
-          [1, 40, 590, 225],
-          [1, 230, 590, 415],
-          [1, 420, 590, 605],
-          [1, 615, 590, 800]
+      let crops = [
+          [1, 1, 590, 205],
+          [1, 215, 590, 415],
+          [1, 425, 590, 625],
+          [1, 635, 590, 835]
         ];
-      } else {
-        crops = [
-          [1, 1, 590, 195],
-          [1, 198, 590, 393],
-          [1, 396, 590, 591],
-          [1, 594, 590, 789]
-        ];
-      }
 
       const pages = pdfDoc.getPages();
 
